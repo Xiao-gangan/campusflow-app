@@ -1,0 +1,83 @@
+{
+  "id": "d1371b80-c7d6-49d6-8d3c-06439e7a413c",
+  "name": "极简通栏 · 快捷招新通知",
+  "document": {
+    "schemaVersion": 1,
+    "target": "email",
+    "mode": "blocks",
+    "meta": {
+      "subjectTemplate": "{{organization_name}}｜{{department}} 招新通知",
+      "preheaderText": "{{organization_name}} · {{department}}"
+    },
+    "theme": {
+      "primaryColor": "#235342",
+      "accentColor": "#dcebd5",
+      "backgroundColor": "#eef1e9",
+      "surfaceColor": "#fcfdf8",
+      "textColor": "#182420",
+      "mutedTextColor": "#6d756f",
+      "buttonColor": "#1d5343",
+      "buttonTextColor": "#fffdfa",
+      "borderColor": "#c9d7ca",
+      "width": 600,
+      "radius": 12,
+      "spacing": 16,
+      "fontFamily": "'PingFang SC','Noto Sans SC','Microsoft YaHei',Arial,sans-serif"
+    },
+    "blocks": [
+      {
+        "id": "text-1",
+        "type": "text",
+        "props": {
+          "text": "{{organization_name}} · RECRUITMENT",
+          "align": "left",
+          "variant": "style:note"
+        }
+      },
+      {
+        "id": "heading-2",
+        "type": "heading",
+        "props": {
+          "text": "招新面试通知",
+          "level": 1,
+          "align": "left"
+        }
+      },
+      {
+        "id": "text-3",
+        "type": "text",
+        "props": {
+          "text": "{{candidate_name}} 同学，你好！我们邀请你参加 {{department}} 的招新面试。请查收时间地点，并回复是否出席。",
+          "align": "left"
+        }
+      },
+      {
+        "id": "info_card-4",
+        "type": "info_card",
+        "props": {
+          "title": "面试安排",
+          "body": "日期：{{interview_date}}\n时间：{{start_time}} – {{end_time}}\n地点：{{location}}",
+          "variant": "style:soft"
+        }
+      },
+      {
+        "id": "button-5",
+        "type": "button",
+        "props": {
+          "text": "打开邀请函",
+          "url": "{{rsvp_link}}",
+          "align": "left",
+          "variant": "style:solid"
+        }
+      },
+      {
+        "id": "footer-6",
+        "type": "footer",
+        "props": {
+          "text": "{{organization_name}} 招新组",
+          "align": "left"
+        }
+      }
+    ]
+  }
+}
